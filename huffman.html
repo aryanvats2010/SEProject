@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Huffman Encoding Game</title>
     <style>
         body {
+            background-image: linear-gradient(to bottom, #273b40, #1d1d1d);
             font-family: Arial, sans-serif;
             background-color: #f7f7f7;
             display: flex;
@@ -13,18 +15,32 @@
             align-items: center;
             min-height: 100vh;
             margin: 0;
+            font-family: 'Roboto Mono', monospace;
         }
 
         .game-container {
-            background-color: #fff;
+            /* background-color: #273b40, #cae9ea, #1d1d1d, #3c4748, #208cdc; */
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
             width: 400px;
+            background-color: #273b40;
         }
 
         h1 {
+            color:white;
             text-align: center;
+        }
+        #encoded-word {
+            color : black;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+        
+        p, h2, h3 {
+            color: white;
         }
 
         ul {
@@ -41,10 +57,11 @@
 
         input[type="text"] {
             width: 100%;
-            padding: 8px;
+            padding: 10px;
             margin-bottom: 10px;
             border-radius: 5px;
             border: 1px solid #ccc;
+            box-sizing: border-box;
         }
 
         button {
@@ -59,6 +76,10 @@
 
         button:hover {
             background-color: #45a049;
+        }
+
+        .start-button {
+            margin-top: 10px;  /* Adds space between the buttons */
         }
 
         #encoded-word {
@@ -76,7 +97,7 @@
 </head>
 <body>
     <div class="game-container">
-        <h1>Escape the Room Game</h1>
+        <h1>Escape the Room</h1>
         <p>Decode the binary string to escape the room!</p>
 
         <div id="freq-table-container">
@@ -99,6 +120,9 @@
             <h3 id="result-message"></h3>
             <button id="retry-button">Try Again</button>
         </div>
+        <!-- Back to Intro Button -->
+        <button class="start-button" onclick="window.location.href='frontPage.html';">Back to Introduction</button>
+
     </div>
 
     <script>
@@ -185,7 +209,7 @@
         }
 
         function startGame() {
-            const wordList = ["apple", "banana", "orange", "grape", "watermelon"];
+            const wordList = ["apple", "banana", "orange", "grape", "watermelon", "huffmannn coding is awesome and fun to do"];
             const word = wordList[Math.floor(Math.random() * wordList.length)];
 
             // Display Frequency Table
