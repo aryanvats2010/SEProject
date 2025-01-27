@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huffman Coding Game - Introduction</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <style>
+        body {
+            /* background-color: #f0f4f7; */
+            background-image: linear-gradient(to bottom, #273b40, #1d1d1d);
+            font-family: 'Roboto Mono', monospace;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .intro-container {
+            width: 80%;
+            max-width: 800px;
+            padding: 20px;
+            background-color: #fff;
+            background-image: linear-gradient(to bottom, #273b40, #1d1d1d);
+            box-shadow: 0 6px 15px rgba(10, 10, 10, 0.7);
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        h1 {
+            color: white;
+        }
+
+        h2 {
+            color: #4CAF50;
+        }
+        h3 {
+            color: white;
+        }
+
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color:white;
+        }
+
+        ul {
+            text-align: left;
+            margin-top: 20px;
+            font-size: 1.1em;
+            color: white;
+        }
+
+        li {
+            margin-bottom: 10px;
+            color: white;
+        }
+        pre {
+            color: white;
+        }
+        .start-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 1.2em;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 30px;
+        }
+
+        .start-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="intro-container">
+        <h1>Welcome to the Huffman Coding Game!</h1>
+        <h2>What is Huffman Coding?</h2>
+        <p>
+            Huffman coding is a popular algorithm used for lossless data compression. It assigns shorter codes to more frequent characters and longer codes to less frequent characters, optimizing space when storing or transmitting data.
+        </p>
+<!-- -------------------------------------- -->
+
+<h2>How does it work?</h2>
+<p>
+    Huffman coding works by creating an optimal binary tree. Here's how the algorithm builds the tree and generates the binary codes:
+</p>
+
+<ul>
+    <li><strong>Step 1: Frequency Analysis</strong> - Count the frequency of each character in the input text.</li>
+    <li><strong>Step 2: Create Leaf Nodes</strong> - Each character is represented as a node with its frequency.</li>
+    <li><strong>Step 3: Build the Tree</strong> - Combine the two least frequent nodes until only one node (the root) remains. This node represents the entire tree.</li>
+    <li><strong>Step 4: Generate Codes</strong> - Traverse the tree from root to leaf, assigning a '0' for left moves and '1' for right moves to create binary codes for each character.</li>
+</ul>
+
+<h3>Example: Constructing the Huffman Tree for "abccba"</h3>
+
+<p><strong>Step 1: Frequency Table</strong></p>
+<pre>
+a: 2
+b: 2
+c: 2
+</pre>
+
+<p><strong>Step 2: Create Leaf Nodes</strong></p>
+<pre>
+Node A: 2 (a)
+Node B: 2 (b)
+Node C: 2 (c)
+</pre>
+
+<p><strong>Step 3: Build the Tree</strong></p>
+<p>Combine the two least frequent nodes (A and B) into a new node:</p>
+<pre>
+New Node (AB): 4 (a + b)
+</pre>
+<p>Now, combine the new node (AB) with C:</p>
+<pre>
+New Node (ABC): 6 (a + b + c)
+</pre>
+
+<p><strong>Step 4: Generate Binary Codes</strong></p>
+<pre>
+a: 00
+b: 01
+c: 1
+</pre>
+
+<p>Now, you can encode any text using these codes!</p>
+
+ <!-- -------------------------------------- -->
+        <!-- <h2>How does it work?</h2>
+        <p>
+            The basic idea behind Huffman coding is to:
+        </p>
+        <ul>
+            <li>First, count the frequency of each character in the input data (text).</li>
+            <li>Build a binary tree based on these frequencies, where each leaf node represents a character and its frequency.</li>
+            <li>Generate a binary code for each character by traversing the tree: left moves are '0' and right moves are '1'.</li>
+            <li>Finally, replace each character in the text with its corresponding Huffman code.</li>
+        </ul> -->
+
+        <h2>How to Play the Game</h2>
+        <p>
+            In this game, your task is to decode an encoded binary string using the Huffman codes.
+        </p>
+        <ul>
+            <li>You will be shown a table with character frequencies and a binary-encoded string.</li>
+            <li>Use the frequency table and the binary string to guess the original word.</li>
+            <li>Enter your guess in the input box and submit it to check if you're correct!</li>
+            <li>If your guess is correct, you escape the room and win the game!</li>
+        </ul>
+
+        <!-- Button to redirect to the game page -->
+        <button class="start-button" onclick="window.location.href='index.html';">Start the Game</button>
+    </div>
+</body>
+</html>
