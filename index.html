@@ -19,9 +19,8 @@
             padding: 50px 20px;
         }
         .container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
             gap: 40px;
             max-width: 1200px;
             margin: auto;
@@ -31,8 +30,6 @@
             padding: 30px;
             border-radius: 15px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-            flex: 1 1 320px;
-            max-width: 400px;
         }
         h1 {
             font-size: 2.5rem;
@@ -87,6 +84,11 @@
             gap: 15px;
             align-items: center;
         }
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
@@ -96,17 +98,17 @@
             <h2>Knapsack Problem</h2>
             <p>The knapsack problem is a combinatorial optimization problem where the goal is to maximize the total value of items placed in a knapsack of limited capacity.</p>
             <div class="buttons">
-                <a href="knapsack.html" class="btn">Knapsack Game</a>
+                <a href="knapsack_index.html" class="btn">Knapsack Game</a>
                 <a href="https://en.wikipedia.org/wiki/Knapsack_problem" target="_blank" class="btn">Learn More</a>
             </div>
             <div class="image-container">
                 <img src="knapsack-video.gif" alt="Knapsack Problem Animation">
             </div>
         </div>
+        
         <div class="section">
             <h2>Dijkstra's Algorithm</h2>
-            <p>Dijkstra's algorithm finds the shortest paths between nodes in a graph, which may represent, for example, road networks.It was developed by Dutch computer scientist Edsger W. Dijkstra.
-            </p>
+            <p>Dijkstra's algorithm finds the shortest paths between nodes in a graph, which may represent, for example, road networks.It was developed by Dutch computer scientist Edsger W. Dijkstra in 1956.</p>
             <div class="buttons">
                 <a href="https://679694066b68ee3c8a399b00--merry-fenglisu-185841.netlify.app/" class="btn">Dijkstra's Game</a>
                 <a href="https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm" target="_blank" class="btn">Learn More</a>
@@ -116,6 +118,7 @@
                 Your browser does not support the video tag.
             </video>
         </div>
+
         <div class="section">
             <h2>Huffman's Algorithm</h2>
             <p>Huffman's algorithm is a greedy algorithm used for lossless data compression by constructing an optimal prefix code.</p>
@@ -125,6 +128,18 @@
             </div>
             <div class="image-container">
                 <img src="huffman-video.gif" alt="Huffman's Algorithm Animation">
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Floyd's Algorithm</h2>
+            <p>Floyd's algorithm, also known as Floyd-Warshall, finds the shortest paths between all pairs of nodes in a weighted graph.</p>
+            <div class="buttons">
+                <a href="floyd.html" class="btn">Floyd's Game</a>
+                <a href="https://en.wikipedia.org/wiki/Floyd-Warshall_algorithm" target="_blank" class="btn">Learn More</a>
+            </div>
+            <div class="image-container">
+                <img src="floyd-video.gif" alt="Floyd's Algorithm Animation">
             </div>
         </div>
     </div>
