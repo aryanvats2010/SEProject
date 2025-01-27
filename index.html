@@ -1,263 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Huffman Encoding Game</title>
+    <title>Algorithm Learning Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        body {
-            background-image: linear-gradient(to bottom, #273b40, #1d1d1d);
-            font-family: Arial, sans-serif;
-            background-color: #f7f7f7;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
+        * {
             margin: 0;
-            font-family: 'Roboto Mono', monospace;
-        }
-
-        .game-container {
-            /* background-color: #273b40, #cae9ea, #1d1d1d, #3c4748, #208cdc; */
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-            width: 400px;
-            background-color: #273b40;
-        }
-
-        h1 {
-            color:white;
-            text-align: center;
-        }
-        #encoded-word {
-            color : black;
-            word-wrap: break-word;
-            overflow-wrap: break-word;
-            max-width: 100%;
-            box-sizing: border-box;
-        }
-        
-        p, h2, h3 {
-            color: white;
-        }
-
-        ul {
-            list-style-type: none;
             padding: 0;
-        }
-
-        li {
-            padding: 5px;
-            background-color: #f0f0f0;
-            margin-bottom: 5px;
-            border-radius: 5px;
-        }
-
-        input[type="text"] {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
             box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
         }
-
-        button {
+        body {
+            background: #1a1a2e;
+            color: #e0e0e0;
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .section {
+            background: #16213e;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 2rem;
+            font-weight: 400;
+            margin-bottom: 15px;
+            color: #00adb5;
+        }
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+        .btn {
+            text-decoration: none;
+            background: #00adb5;
+            color: #fff;
+            padding: 15px 30px;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+            margin-bottom: 10px;
             width: 100%;
-            padding: 10px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
         }
-
-        button:hover {
-            background-color: #45a049;
+        .btn:hover {
+            transform: translateY(-5px);
+            background: #393e46;
         }
-
-        .start-button {
-            margin-top: 10px;  /* Adds space between the buttons */
+        .footer {
+            margin-top: 50px;
+            font-size: 1rem;
         }
-
-        #encoded-word {
-            font-family: monospace;
-            background-color: #f0f0f0;
-            padding: 10px;
-            border-radius: 5px;
-            white-space: pre-wrap;
+        video {
+            width: 100%;
+            border-radius: 10px;
+            margin-top: 20px;
         }
-
-        .hidden {
-            display: none;
+        .image-container img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+        }
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="game-container">
-        <h1>Escape the Room</h1>
-        <p>Decode the binary string to escape the room!</p>
+    <h1>Algorithm Learning Hub</h1>
+    <div class="container">
+        <div class="section">
+            <h2>Knapsack Problem</h2>
+            <p>The knapsack problem is a combinatorial optimization problem where the goal is to maximize the total value of items placed in a knapsack of limited capacity.</p>
+            <div class="buttons">
+                <a href="knapsack_index.html" class="btn">Knapsack Game</a>
+                <a href="https://en.wikipedia.org/wiki/Knapsack_problem" target="_blank" class="btn">Learn More</a>
+            </div>
+            <div class="image-container">
+                <img src="knapsack-video.gif" alt="Knapsack Problem Animation">
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Dijkstra's Algorithm</h2>
+            <p>Dijkstra's algorithm finds the shortest paths between nodes in a graph, which may represent, for example, road networks.It was developed by Dutch computer scientist Edsger W. Dijkstra in 1956.</p>
+            <div class="buttons">
+                <a href="https://6797898be4546b68510e66c7--clever-quokka-557551.netlify.app/" class="btn">Dijkstra's Game</a>
+                <a href="https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm" target="_blank" class="btn">Learn More</a>
+            </div>
+            <img src="dijkstra.gif" alt="Dijkstra's Algorithm Animation" style="width: 300px; height: 200px; margin-top: 20px;">
 
-        <div id="freq-table-container">
-            <h2>Character Frequency Table</h2>
-            <ul id="freq-table"></ul>
+
         </div>
 
-        <div id="encoded-word-container">
-            <h2>Encoded Binary String</h2>
-            <p id="encoded-word"></p>
+        <div class="section">
+            <h2>Huffman's Algorithm</h2>
+            <p>Huffman's algorithm is a greedy algorithm used for lossless data compression by constructing an optimal prefix code.</p>
+            <div class="buttons">
+                <a href="huffman.html" class="btn">Huffman's Game</a>
+                <a href="https://en.wikipedia.org/wiki/Huffman_coding" target="_blank" class="btn">Learn More</a>
+            </div>
+            <div class="image-container">
+                <img src="huffman-video.gif" alt="Huffman's Algorithm Animation">
+            </div>
         </div>
 
-        <div id="guess-container">
-            <h2>Enter your Guess:</h2>
-            <input type="text" id="guess" placeholder="Your decoded word">
-            <button id="submit-guess">Submit Guess</button>
+        <div class="section">
+            <h2>Floyd's Algorithm</h2>
+            <p>Floyd's algorithm, also known as Floyd-Warshall, finds the shortest paths between all pairs of nodes in a weighted graph.</p>
+            <div class="buttons">
+                <a href="floyd.html" class="btn">Floyd's Game</a>
+                <a href="https://en.wikipedia.org/wiki/Floyd-Warshall_algorithm" target="_blank" class="btn">Learn More</a>
+            </div>
+            <div class="image-container">
+                <img src="floyd-video.gif" alt="Floyd's Algorithm Animation">
+            </div>
         </div>
-
-        <div id="game-result" class="hidden">
-            <h3 id="result-message"></h3>
-            <button id="retry-button">Try Again</button>
-        </div>
-        <!-- Back to Intro Button -->
-        <button class="start-button" onclick="window.location.href='frontPage.html';">Back to Introduction</button>
-
     </div>
-
-    <script>
-        class TreeNode {
-            constructor(char, weight, left = null, right = null) {
-                this.char = char;
-                this.weight = weight;
-                this.left = left;
-                this.right = right;
-            }
-        }
-
-        function encode(text, codes) {
-            const result = [];
-            for (const char of text) {
-                result.push(codes.get(char));
-            }
-            return result.join('');
-        }
-
-        function decode(encodedText, codes) {
-            let result = '';
-            const reversedCodes = {};
-            Array.from(codes.entries()).forEach(([key, value]) => {
-                reversedCodes[value] = key;
-            });
-
-            let currentCode = '';
-            for (const bit of encodedText) {
-                currentCode += bit;
-                if (reversedCodes[currentCode]) {
-                    result += reversedCodes[currentCode];
-                    currentCode = '';
-                }
-            }
-
-            return result;
-        }
-
-        function getCharsFrequency(text) {
-            const freq = new Map();
-            for (const char of text) {
-                const count = freq.get(char);
-                freq.set(char, count ? count + 1 : 1);
-            }
-            return Array.from(freq).sort((a, b) => b[1] - a[1]);
-        }
-
-        function getTree(freq) {
-            const nodes = [];
-            for (const [char, weight] of freq) {
-                nodes.push(new TreeNode(char, weight));
-            }
-
-            while (nodes.length > 1) {
-                nodes.sort((a, b) => a.weight - b.weight);
-                const left = nodes.shift();
-                const right = nodes.shift();
-                const parent = new TreeNode('', left.weight + right.weight, left, right);
-                nodes.push(parent);
-            }
-
-            return nodes[0];
-        }
-
-        function getCharCodesFromSource(text) {
-            const freqArr = getCharsFrequency(text);
-            const tree = getTree(freqArr);
-            const codes = new Map();
-            getCodes(tree, (char, code) => {
-                codes.set(char, code);
-            });
-            return codes;
-        }
-
-        function getCodes(tree, cb, code = '') {
-            if (!tree) return;
-            if (!tree.left && !tree.right) {
-                cb(tree.char, code);
-                return;
-            }
-            getCodes(tree.left, cb, code + '0');
-            getCodes(tree.right, cb, code + '1');
-        }
-
-        function startGame() {
-            const wordList = ["apple", "banana", "orange", "grape", "watermelon", "huffmannn coding is awesome and fun to do"];
-            const word = wordList[Math.floor(Math.random() * wordList.length)];
-
-            // Display Frequency Table
-            const freqArr = getCharsFrequency(word);
-            const freqTableContainer = document.getElementById('freq-table');
-            freqTableContainer.innerHTML = '';
-            freqArr.forEach(([char, freq]) => {
-                const li = document.createElement('li');
-                li.textContent = `${char}: ${freq}`;
-                freqTableContainer.appendChild(li);
-            });
-
-            // Generate Huffman Codes
-            const codes = getCharCodesFromSource(word);
-
-            // Encode the word
-            const encodedWord = encode(word, codes);
-            const encodedWordContainer = document.getElementById('encoded-word');
-            encodedWordContainer.textContent = encodedWord;
-
-            // Guess input and submit button
-            const guessInput = document.getElementById('guess');
-            const submitButton = document.getElementById('submit-guess');
-            const gameResult = document.getElementById('game-result');
-            const resultMessage = document.getElementById('result-message');
-            const retryButton = document.getElementById('retry-button');
-
-            submitButton.onclick = function() {
-                const guess = guessInput.value.trim();
-                const decodedWord = decode(encodedWord, codes);
-
-                if (guess === decodedWord) {
-                    resultMessage.textContent = "Congratulations! You've decoded the word and escaped the room!";
-                    gameResult.classList.remove('hidden');
-                } else {
-                    resultMessage.textContent = `Wrong guess! `;
-                    gameResult.classList.remove('hidden');
-                }
-            };
-
-            retryButton.onclick = function() {
-                gameResult.classList.add('hidden');
-                startGame(); // Restart the game
-            };
-        }
-
-        startGame();
-    </script>
+    <div class="footer">&copy; 2025 Algorithm Learning Hub. All Rights Reserved.</div>
 </body>
 </html>
-<!-- The correct word was: ${decodedWord} -->
