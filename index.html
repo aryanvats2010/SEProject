@@ -20,6 +20,7 @@
         }
         .container {
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
             gap: 40px;
             max-width: 1200px;
@@ -30,7 +31,8 @@
             padding: 30px;
             border-radius: 15px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-            flex: 1;
+            flex: 1 1 320px;
+            max-width: 400px;
         }
         h1 {
             font-size: 2.5rem;
@@ -56,7 +58,9 @@
             font-size: 1.2rem;
             font-weight: 600;
             transition: all 0.3s ease;
-            margin-right: 10px;
+            display: inline-block;
+            margin-bottom: 10px;
+            width: 100%;
         }
         .btn:hover {
             transform: translateY(-5px);
@@ -69,7 +73,7 @@
         video {
             width: 100%;
             border-radius: 10px;
-            margin-top: 40px;
+            margin-top: 20px;
         }
         .image-container img {
             width: 100%;
@@ -78,7 +82,10 @@
             margin-top: 20px;
         }
         .buttons {
-            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
         }
     </style>
 </head>
@@ -98,7 +105,8 @@
         </div>
         <div class="section">
             <h2>Dijkstra's Algorithm</h2>
-            <p>Dijkstra's algorithm finds the shortest paths between nodes in a graph, which may represent, for example, road networks.</p>
+            <p>Dijkstra's algorithm finds the shortest paths between nodes in a graph, which may represent, for example, road networks.It was developed by Dutch computer scientist Edsger W. Dijkstra.
+            </p>
             <div class="buttons">
                 <a href="https://679694066b68ee3c8a399b00--merry-fenglisu-185841.netlify.app/" class="btn">Dijkstra's Game</a>
                 <a href="https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm" target="_blank" class="btn">Learn More</a>
@@ -107,6 +115,17 @@
                 <source src="dijkstra_video.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
+        </div>
+        <div class="section">
+            <h2>Huffman's Algorithm</h2>
+            <p>Huffman's algorithm is a greedy algorithm used for lossless data compression by constructing an optimal prefix code.</p>
+            <div class="buttons">
+                <a href="huffman.html" class="btn">Huffman's Game</a>
+                <a href="https://en.wikipedia.org/wiki/Huffman_coding" target="_blank" class="btn">Learn More</a>
+            </div>
+            <div class="image-container">
+                <img src="huffman-video.gif" alt="Huffman's Algorithm Animation">
+            </div>
         </div>
     </div>
     <div class="footer">&copy; 2025 Algorithm Learning Hub. All Rights Reserved.</div>
